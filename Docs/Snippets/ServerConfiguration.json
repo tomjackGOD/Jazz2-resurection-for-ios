@@ -1,0 +1,94 @@
+{
+	/* The file can contain both multi-line comments */
+	// and single-line comments
+	
+	/* "$include" directive can be used to include configuration from another file */
+	"$include": "BaseConfig.json",
+	
+	"ServerName": "{PlayerName}'s Server",
+
+	/* "ServerAddressOverride" allows to specify alternative public server address */
+	/*"ServerAddressOverride": "123.123.123.123",*/
+	
+	"WelcomeMessage": "Welcome to the {PlayerName}'s server!",
+	"MaxPlayerCount": 16,
+	"MinPlayerCount": 1,
+	"ServerPort": 7438,
+	"IsPrivate": false,
+	"RequiresDiscordAuth": false,
+	"AllowedPlayerTypes": 7, /* Jazz + Spaz + Lori */
+	"IdleKickTimeSecs": 600,
+	
+	/* Only whitelisted players can join if the whitelist is specified */
+	/*"WhitelistedUniquePlayerIDs": {
+		"8C0D:9387:CDE3:F357:8D8B:8667:3123:1645": "User-defined comment 1"
+	},*/
+	
+	/* Admins can use server commands in the console */
+	"AdminUniquePlayerIDs": {
+		"370D:9320:3785:3216:9876:8843:323C:1401": "*"
+	},
+	
+	"BannedUniquePlayerIDs": {
+		"8C0D:8887:CDE3:F357:8D8B:8837:3123:1645": "User-defined comment 1",
+		"990D:9320:3755:3216:9876:8843:323C:1401": "User-defined comment 2"
+	},
+	"BannedIPAddresses": {
+		"192.168.1.2": "User-defined comment 1",
+		"111.222.333.444": "User-defined comment 2"
+	},
+
+	"ReforgedGameplay": true,
+	"RandomizePlaylist": false,
+	"TotalPlayerPoints": 100,
+	
+	/* These properties are redundant, because they are overriden by the playlist */
+	"GameMode": "battle",
+	"Elimination": false,
+	"InitialPlayerHealth": -1,
+	"MaxGameTimeSecs": 900,
+	"PreGameSecs": 60,
+	"SpawnInvulnerableSecs": 4,
+	"TotalKills": 10,
+	"TotalLaps": 3,
+	"TotalTreasureCollected": 0,
+	"OvertimeSecs": 0,
+	
+	/* Spectating */
+	"EnableSpectate": true,
+	"EnableFreeCamera": true,
+	"AllowJoinDuringRound": true,
+	"JoinCooldownSecs": 0,
+
+	/* Playlist can contain unlimited number of entries */
+	"Playlist":
+	[
+		{
+			"LevelName": "arace1",
+			"GameMode": "race",
+			"Elimination": false,
+			"InitialPlayerHealth": -1,
+			"MaxGameTimeSecs": 900,
+			"PreGameSecs": 60,
+			"SpawnInvulnerableSecs": 4,
+			"TotalKills": 10,
+			"TotalLaps": 3,
+			"TotalTreasureCollected": 0,
+			"OvertimeSecs": 60
+		},
+		{
+			"LevelName": "battle1",
+			"GameMode": "battle",
+			"Elimination": false,
+			"InitialPlayerHealth": -1,
+			"MaxGameTimeSecs": 900,
+			"PreGameSecs": 60,
+			"SpawnInvulnerableSecs": 4,
+			"TotalKills": 10,
+			"TotalLaps": 3,
+			"TotalTreasureCollected": 0
+		}
+	],
+	
+	"PlaylistIndex": 0
+}
